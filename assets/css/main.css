@@ -1,0 +1,56 @@
+@import url("branding.css");
+
+body {
+  background-color: var(--accent-color-darker1) !important;
+  font-family: nunito, sans-serif;
+}
+
+.container-fluid {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* padding: 30px; */
+  width: 100%;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.panel-default {
+  border-color: var(--accent-color);
+  background: linear-gradient(to bottom, var(--accent-color), var(--accent-color-lighter1));
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-large {
+  grid-column: span 2;
+}
+
+h3 {
+  margin-top: 0;
+}

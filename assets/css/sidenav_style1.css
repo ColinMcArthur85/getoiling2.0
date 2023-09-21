@@ -1,0 +1,190 @@
+:root {
+  --main-foreground-color: #1abc9c;
+  --header-background: #fbebda;
+  --callout-color: #fffae8;
+
+  /* Complementary colors */
+  --complementary-color: #bc1a4b;
+
+  /* Dark shades */
+  --dark-text-color: #2e2e2e;
+  --light-text-color: #f1f1f1;
+
+  /* Accent colors */
+  --accent-green: #16a085;
+  --accent-peach: #f9d6c1;
+  --accent-cream: #fff5d0;
+
+  /* Grays */
+  --neutral-light-gray: #e9e9e9;
+  --neutral-dark-gray: #7e7e7e;
+}
+
+/* 2. General styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Sidebar styles */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80px;
+  background-color: var(--neutral-dark-gray);
+  transition: all 0.3s ease-in-out;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.sidebar-header,
+.logo,
+.profile {
+  /* text-align: center; */
+  transition: all 0.3s ease-in-out;
+}
+
+/* .logo {
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0; 
+} */
+
+.profile {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid var(--light-text-color);
+  background: conic-gradient(var(--main-foreground-color) 0% 25%, var(--complementary-color) 25% 50%, var(--accent-peach) 50% 75%, var(--neutral-dark-gray) 75% 100%);
+  box-sizing: content-box;
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #fff;
+  top: 0.4rem;
+  left: 50%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.fas.fa-bars {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.fas.fa-bars.bar-rotate {
+  transform: rotate(90deg);
+}
+
+.fas.fa-bars.bar-rotate:before {
+  content: "\f00d";
+}
+
+.sidebar.active {
+  width: 250px;
+}
+
+.sidebar.active ~ .main-content {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* :is(.sidebar.active .logo, .sidebar.active .user-name) {
+  opacity: 1;
+} */
+
+.sidebar.active #btn {
+  position: inherit;
+}
+
+/* 4. Menu styles */
+
+.menu-items {
+  color: var(--light-text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  /* position: relative;
+  left: 30px; */
+}
+
+.menu-icons {
+  /* text-align: center; */
+  font-size: 1em;
+}
+
+/* .menu-icons:hover {
+  background-color: var(--light-text-color);
+  padding: 0.25em;
+} */
+
+.menu-items h2 {
+  /* display: none; */
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.active .menu-items h2 {
+  display: block;
+}
+
+.menu-items a {
+  color: var(--light-text-color);
+  /* display: flex;
+  align-items: flex-start; */
+  text-decoration: none;
+  border-radius: 0.8rem;
+  /* width: max-content; */
+}
+
+.menu-items a:hover {
+  background-color: var(--light-text-color);
+  border-radius: 5px;
+  color: var(--accent-green);
+  /* opacity: 1; */
+}
+
+.profile h2 {
+  opacity: 0;
+  color: var(--light-text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.active profile h2 {
+  opacity: 1;
+}
+
+.tooltip {
+  position: relative;
+  left: 125px;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.tooltip:hover {
+  opacity: 1;
+  color: var(--light-text-color);
+}
+
+.sidebar.active .tooltip {
+  opacity: 1;
+}

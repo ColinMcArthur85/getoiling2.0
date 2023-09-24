@@ -1,0 +1,50 @@
+// Base or primary color
+$color-default: #1abc9c;
+
+// ACCENT COLORS AND THEIR VARIATIONS
+
+// Lighter shade of the base color
+$accent-color-lighter1: #4ecfbf;
+// Slightly lighter shade, for hover effects
+$accent-color-hover: #1ed6b2;
+// Slightly darker shade of the base color
+$accent-color-darker1: #179b89;
+// Darker shade of the base color
+$dark-accent-color: #15967c;
+
+// GREYSCALE SHADES
+
+// Dark text color, for readability on light backgrounds
+$dark-text-color: #2e2e2e;
+// Light text color, for readability on dark backgrounds
+$light-text-color: #f1f1f1;
+// Light gray, neutral tone
+$neutral-light-gray: #e9e9e9;
+// Dark gray, neutral tone
+$neutral-dark-gray: #7e7e7e;
+
+// COMPLEMENTARY AND CONTRASTING COLORS
+
+// Contrasting with the primary color
+$complementary-color: #bc1a4b;
+// Another contrasting color
+$color-second: #0067ac;
+// Light contrasting color, suitable for backgrounds
+$header-background: #fbebda;
+// Another light contrasting color, for backgrounds or highlights
+$callout-color: #fffae8;
+// Light peach contrasting accent color
+$accent-peach: #f9d6c1;
+// Cream contrasting accent color
+$accent-cream: #fff5d0;
+
+// OTHER COLORS
+
+// Pure white
+$color-white: #fff;
+// Background color
+$color-body: #e4e9f7;
+// Another light color
+$color-light: #e0e0e0;
+// Different green shade as an accent color
+$accent-green: #16a085;

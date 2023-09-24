@@ -1,6 +1,6 @@
 
 
-  <div class="sidebar">
+  <div class="sidebar open">
     <div class="logo_details">
       <svg    class="logo_name"
               xmlns="http://www.w3.org/2000/svg"
@@ -70,10 +70,17 @@
       </li>
       <li>
         <a href="#">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="fas fa-tachometer-alt"></i>
           <span class="link_name">My Dashboard</span>
         </a>
         <span class="tooltip">My Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-graduation-cap"></i>
+          <span class="link_name">Success Academy</span>
+        </a>
+        <span class="tooltip">Success Academy</span>
       </li>
       <li>
         <a href="#">

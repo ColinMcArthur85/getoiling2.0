@@ -1,0 +1,115 @@
+@import "reset";
+@import "branding";
+@import "sidenav";
+
+body {
+  font-family: nunito, sans-serif;
+}
+
+header {
+  color: $accent-color-lighter1;
+  background-color: $color-default;
+  padding: 20px;
+  text-align: end;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.container-fluid {
+  background-color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.panel-default {
+  border-color: $accent-color-lighter1;
+  background: linear-gradient(to bottom, $accent-color-darker1, $accent-color-lighter1);
+}
+
+// CARDS
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+.card {
+  background: $neutral-light-gray; // I used the $neutral-light-gray as a close match
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &-large {
+    grid-column: span 2;
+  }
+
+  &-header {
+    border-bottom: 1px solid $dark-text-color;
+    padding: 1em;
+  }
+
+  &-content {
+    display: flex;
+    padding: 1em;
+  }
+
+  &-column {
+    margin-right: 4%;
+    flex: 1;
+
+    ul li {
+      height: 100%;
+
+      a {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.actions-list-left,
+.actions-list-center {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+    height: 100%;
+    flex: 1;
+    transition: all 0.4s ease;
+    transform: scaleX(1);
+
+    li a {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+  }
+}
+
+.actions-list-title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+a:hover {
+  background-color: $accent-color-lighter1;
+  pointer-events: all;
+  cursor: pointer;
+  transform: scaleX(1);
+}

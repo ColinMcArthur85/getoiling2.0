@@ -6,9 +6,9 @@
       <title>Welcome To GetOiling 2.0</title>
       <!-- Custom CSS Files -->
       <!-- <link rel="stylesheet" href="./assets/css/branding.css">
-      <link rel="stylesheet" href="./assets/css/main.css">
-      <link rel="stylesheet" href="./assets/css/sidenav_style.css">
-      <link rel="stylesheet" href="./assets/css/utility.css"> -->
+         <link rel="stylesheet" href="./assets/css/main.css">
+         <link rel="stylesheet" href="./assets/css/sidenav_style.css">
+         <link rel="stylesheet" href="./assets/css/utility.css"> -->
       <link rel="stylesheet" href="./assets/css/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,35 +44,35 @@
                         <div class="card-column actions-list-left">
                            <ul>
                               <li>
-                                 <a href="#" id="engage">
+                                 <a class="mouseover-ltr" href="#" id="engage">
                                     <i class="fas fa-handshake"></i>
                                     <h3>Engage</h3>
                                     <i class="fas fa-chevron-right"></i>
                                  </a>
                               </li>
                               <li>
-                                 <a href="#" id="create">
+                                 <a class="mouseover-ltr" href="#" id="create">
                                     <i class="fas fa-pencil-alt"></i>
                                     <h3>Create</h3>
                                     <i class="fas fa-chevron-right"></i>
                                  </a>
                               </li>
                               <li>
-                                 <a href="#" id="automate">
+                                 <a class="mouseover-ltr" href="#" id="automate">
                                     <i class="fas fa-robot"></i>
                                     <h3>Automate</h3>
                                     <i class="fas fa-chevron-right"></i>
                                  </a>
                               </li>
                               <li>
-                                 <a href="#" id="design">
+                                 <a class="mouseover-ltr" href="#" id="design">
                                     <i class="fas fa-palette"></i>
                                     <h3>Design</h3>
                                     <i class="fas fa-chevron-right"></i>
                                  </a>
                               </li>
                               <li>
-                                 <a href="#" id="learn">
+                                 <a class="mouseover-ltr" href="#" id="learn">
                                     <i class="fas fa-book"></i>
                                     <h3>Learn</h3>
                                     <i class="fas fa-chevron-right"></i>
@@ -82,38 +82,71 @@
                         </div>
                         <div class="card-column actions-list-center">
                            <ul>
-                              <li>
-                                 <a href="#">
-                                    <div class="actions-list-title">
-                                 <i class="fas fa-envelope"></i>
-                                 <h3>SEND EMAIL, TEXT, OR APP NOTIFICATION</h3>
+                              <li style="display: block;">
+                                 <a class="mouseover-ltr actions-list-item" href="#">
+                                    <div class="actions-list-item-title">
+                                       <i class="fas fa-envelope"></i>
+                                       <h3>SEND EMAIL, TEXT, OR APP NOTIFICATION</h3>
                                     </div>
-                                 <p>Stay in touch with your contacts by sending or scheduling a message.</p>
+                                    <p>Stay in touch with your contacts by sending or scheduling a message.</p>
                                  </a>
                               </li>
+                              <li style="display:none;">
+                                 <a class="mouseover-ltr actions-list-item" href="#">
+                                    <div class="actions-list-item-title">
+                                       <i class="fas fa-envelope"></i>
+                                       <h3>CREATE CONTACT</h3>
+                                        </div>
+                                  <p>Create a contact.</p>
+                                 </a>
+                               </li>
                               <li>
-                                 <a href="#">
-                                    <div class="actions-list-title">
-                                 <i class="fas fa-comment-dots"></i>
-                                 <h3>SEND EMAIL, TEXT, OR APP NOTIFICATION</h3>
+                                 <a class="mouseover-ltr actions-list-item" href="#">
+                                    <div class="actions-list-item-title">
+                                       <i class="fas fa-comment-dots"></i>
+                                       <h3>MY CONTACTS</h3>
                                     </div>
-                                 <p>Stay in touch with your contacts by sending or scheduling a message.</p>
-</a>
+                                    <p>Track, organize, find, set to-dos, and communicate with contacts.</p>
+                                 </a>
                               </li>
                            </ul>
                         </div>
                         <div class="card-column actions-list-right">
                            <ul>
-                              <li>Start or Schedule a Zoom Video Call</li>
-                              <li>Manage Member Area</li>
-                              <li>Manage Vaults</li>
-                              <li>Invite Contacts to a Vault</li>
-                              <li>Create Contact</li>
-                              <li>Create Contact</li>
-                              <li>Import Contacts</
+                              <li>
+                                 <a class="mouseover-ltr" href="#">
+                                 <span>Start or Schedule a Zoom Video Call</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="mouseover-ltr" href="#">
+                                 <span>Manage Member Area</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="mouseover-ltr" href="#">
+                                 <span>Manage Vaults</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="mouseover-ltr" href="#">
+                                 <span>Invite Contacts to a Vault</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="mouseover-ltr" href="#">
+                                 <span>Create Contact</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="mouseover-ltr" href="#">
+                                 <span>Import Contacts</span>
+                                 </a>
+                              </li>
+                              <li class="flex-align-center">
                                  <i class="bx bx-search"></i>
                                  <input type="text" placeholder="Search...">
-                                 <span class="tooltip">Search</span>
+                                 <!-- <span class="tooltip">Search</span> -->
                               </li>
                            </ul>
                            </ul>   

@@ -94,7 +94,16 @@
           <i class="fas fa-address-book"></i>
           <span class="link_name">Contacts</span>
         </a>
-        <span class="tooltip">Contacts</span>
+        <span class="tooltip">
+        <ul>
+          <li>My Contacts</li>
+          <li>Campaigns</li>
+          <li>Messages</li>
+          <li>Settings</li>
+        </ul>  
+        Contacts
+
+        </span>
       </li>
       <li>
         <a href="#">

@@ -1,6 +1,8 @@
 @import "reset";
 @import "branding";
 @import "sidenav";
+@import "mixin";
+@import "utility";
 
 body {
   font-family: nunito, sans-serif;
@@ -32,7 +34,11 @@ p {
 
 .panel-default {
   border-color: $accent-color-lighter1;
-  background: linear-gradient(to bottom, $accent-color-darker1, $accent-color-lighter1);
+  background: linear-gradient(
+    to bottom,
+    $accent-color-darker1,
+    $accent-color-lighter1
+  );
 }
 
 // CARDS
@@ -42,12 +48,13 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
-  max-width: 80em;
+  max-width: 60em;
   margin: 0 auto;
 }
 
 .card {
-  background: $neutral-light-gray; // I used the $neutral-light-gray as a close match
+  background: $color-default;
+  color: $color-white;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -74,20 +81,23 @@ p {
 
       a {
         height: 100%;
+        color: $color-white;
+        background-color: $accent-color-lighter1;
       }
     }
   }
 }
 
 .actions-list-left,
-.actions-list-center {
+.actions-list-center,
+.actions-list-right {
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
     padding: 0;
-    gap: 1em;
+    gap: 8px;
     height: 100%;
     flex: 1;
     transition: all 0.4s ease;
@@ -101,15 +111,32 @@ p {
   }
 }
 
-.actions-list-title {
+.actions-list-item {
   display: flex;
-  align-items: center;
-  gap: 1em;
+  flex-direction: column;
+
+  &-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
 }
 
-a:hover {
-  background-color: $accent-color-lighter1;
-  pointer-events: all;
-  cursor: pointer;
-  transform: scaleX(1);
+.bx-search {
+  // position: absolute;
+  // top: 50%;
+  // left: 0;
+  // transform: translateY(-50%);
+  font-size: 22px;
+  background-color: #2e2e2e;
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
 }

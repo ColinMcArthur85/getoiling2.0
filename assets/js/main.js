@@ -22,10 +22,16 @@ window.onload = function () {
   }
 };
 
-// let btn = document.getElementById("btn");
-// let sidebar = document.querySelector(".sidebar");
-
-// btn.addEventListener("click", function () {
-//   sidebar.classList.toggle("active");
-//   btn.classList.toggle("bar-rotate");
+// document.getElementById("engage").addEventListener("click", function (event) {
+//   event.preventDefault();
+//   this.outerHTML = `
+//      <li>
+//         <a class="mouseover-ltr actions-list-item" href="#">
+//            <div class="actions-list-item-title">
+//               <i class="fas fa-envelope"></i>
+//               <h3>SEND EMAIL, TEXT, OR APP NOTIFICATION</h3>
+//            </div>
+//            <p>Stay in touch with your contacts by sending or scheduling a message.</p>
+//         </a>
+//      </li>`;
 // });

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   padding: 0%;
@@ -42,7 +42,12 @@
   object-fit: cover;
   padding: 5px;
   border: 2px solid var(--light-text-color);
-  background: conic-gradient($color-default 0% 25%, $complementary-color 25% 50%, $accent-peach 50% 75%, $neutral-dark-gray 75% 100%);
+  background: conic-gradient(
+    $color-default 0% 25%,
+    $complementary-color 25% 50%,
+    $accent-peach 50% 75%,
+    $neutral-dark-gray 75% 100%
+  );
   box-sizing: content-box;
 }
 
@@ -345,3 +350,10 @@ footer {
     width: calc(100% - 250px);
   }
 }
+
+// body > div > div > div.sidebar.open > ul > li:nth-child(5) > span:hover {
+//   opacity: 1;
+//   pointer-events: auto;
+//   transition: all 0.4s ease;
+//   top: 0px;
+// }

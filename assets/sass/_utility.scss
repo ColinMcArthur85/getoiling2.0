@@ -7,34 +7,54 @@
   @include mouseover-ltr-effect($accent-color-darker1, $color-white);
 }
 
-// .mouseover-ltr {
-//   position: relative;
-//   overflow: hidden;
+// FLEX UTILITIES
+/* Basic Flexbox Centering: Center items both horizontally and vertically */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     transform: scaleX(0);
-//     background-color: $color-white;
-//     border-radius: 5px;
-//     transition: transform 0.3s ease-in-out;
-//     transform-origin: left;
-//     z-index: -2;
-//   }
+/* Row direction with different justifications */
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-//   &:hover {
-//     &::after {
-//       transform: scaleX(1);
-//     }
+.flex-row-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
-//     .link_name,
-//     i {
-//       transition: all 0.5s ease;
-//       color: $color-default;
-//     }
-//   }
-// }
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Column direction with different justifications */
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-col-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

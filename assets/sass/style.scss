@@ -34,11 +34,7 @@ p {
 
 .panel-default {
   border-color: $accent-color-lighter1;
-  background: linear-gradient(
-    to bottom,
-    $accent-color-darker1,
-    $accent-color-lighter1
-  );
+  background: linear-gradient(to bottom, $accent-color-darker1, $accent-color-lighter1);
 }
 
 // CARDS

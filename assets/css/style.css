@@ -60,20 +60,7 @@ a:hover, a:visited, a:focus {
   border-radius: 5px;
 }
 
-.profile-img {
-  position: relative;
-  left: -6px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 5px;
-  border: 2px solid var(--light-text-color);
-  background: conic-gradient(#1abc9c 0% 25%, #bc1a4b 25% 50%, #f9d6c1 50% 75%, #7e7e7e 75% 100%);
-  box-sizing: content-box;
-}
-
+/* .sidebar styles */
 .sidebar {
   min-height: 100vh;
   width: 80px;
@@ -86,25 +73,34 @@ a:hover, a:visited, a:focus {
   left: 0;
   border-right: 1px solid #4ecfbf;
 }
+
 .sidebar.open {
   width: 250px;
 }
+
+/* .logo_details styles nested inside .sidebar */
 .sidebar .logo_details {
   height: 60px;
   display: flex;
   align-items: center;
   position: relative;
 }
+
+/* .icon and .logo_name styles nested inside .logo_details which is nested inside .sidebar */
 .sidebar .logo_details .icon,
 .sidebar .logo_details .logo_name {
   opacity: 0;
   transition: all 0.5s ease;
 }
+
+/* .logo_name styles nested inside .logo_details which is nested inside .sidebar */
 .sidebar .logo_details .logo_name {
   color: #16a085;
   font-size: 22px;
   font-weight: 600;
 }
+
+/* #btn styles nested inside .logo_details which is nested inside .sidebar */
 .sidebar .logo_details #btn {
   position: absolute;
   top: 50%;
@@ -115,10 +111,13 @@ a:hover, a:visited, a:focus {
   cursor: pointer;
   transition: all 0.5s ease;
 }
+
+/* .icon and .logo_name styles nested inside .logo_details which is nested inside .sidebar.open */
 .sidebar.open .logo_details .icon,
 .sidebar.open .logo_details .logo_name {
   opacity: 1;
 }
+
 .sidebar i {
   color: #fff;
   height: 60px;
@@ -127,15 +126,18 @@ a:hover, a:visited, a:focus {
   font-size: 25px;
   text-align: center;
 }
+
 .sidebar .nav-list {
   margin-top: 20px;
   height: 100%;
 }
+
 .sidebar li {
   position: relative;
   margin: 8px 0;
   list-style: none;
 }
+
 .sidebar li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
@@ -143,6 +145,7 @@ a:hover, a:visited, a:focus {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .sidebar li .tooltip {
   position: absolute;
   top: -20px;
@@ -158,9 +161,11 @@ a:hover, a:visited, a:focus {
   opacity: 0;
   pointer-events: none;
 }
+
 .sidebar li .tooltip.open {
   display: none;
 }
+
 .sidebar li a {
   display: flex;
   height: 100%;
@@ -172,15 +177,18 @@ a:hover, a:visited, a:focus {
   transition: all 0.5s ease;
   z-index: 12;
 }
+
 .sidebar li a:hover .link_name,
 .sidebar li a:hover i {
   transition: all 0.5s ease;
   color: #1abc9c;
 }
+
 .sidebar li a:hover::after {
   transform: scaleX(1);
   color: #1abc9c;
 }
+
 .sidebar li a::after {
   content: "";
   position: absolute;
@@ -193,6 +201,7 @@ a:hover, a:visited, a:focus {
   transform-origin: left;
   z-index: -2;
 }
+
 .sidebar li a .link_name,
 .sidebar li a .fa-cog {
   color: #fff;
@@ -204,17 +213,20 @@ a:hover, a:visited, a:focus {
   pointer-events: none;
   opacity: 0;
 }
-.sidebar.open .sidebar li a .link_name,
-.sidebar.open .sidebar li a .fa-cog {
+
+.sidebar.open li a .link_name,
+.sidebar.open li a .fa-cog {
   opacity: 1;
   pointer-events: auto;
 }
+
 .sidebar li i {
   height: 35px;
   line-height: 35px;
   font-size: 18px;
   border-radius: 5px;
 }
+
 .sidebar li.profile {
   position: fixed;
   height: 60px;
@@ -224,11 +236,13 @@ a:hover, a:visited, a:focus {
   padding: 10px 14px;
   transition: all 0.5s ease;
 }
+
 .sidebar li.profile .profile_details {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
 }
+
 .sidebar li.profile img {
   height: 45px;
   width: 45px;
@@ -236,6 +250,7 @@ a:hover, a:visited, a:focus {
      object-fit: cover;
   border-radius: 50%;
 }
+
 .sidebar li.profile .name,
 .sidebar li.profile .designation {
   font-size: 15px;
@@ -243,13 +258,15 @@ a:hover, a:visited, a:focus {
   color: #fff;
   white-space: nowrap;
 }
-.sidebar li.profile .name.designation,
-.sidebar li.profile .designation.designation {
+
+.sidebar li.profile .designation {
   font-size: 12px;
 }
-.sidebar li.open.profile {
+
+.sidebar.open li.profile {
   width: 250px;
 }
+
 .sidebar input {
   font-size: 15px;
   color: #2e2e2e;
@@ -262,15 +279,19 @@ a:hover, a:visited, a:focus {
   background-color: #7e7e7e;
   transition: all 0.5s ease;
 }
+
 .sidebar input::-moz-placeholder {
   color: #e0e0e0;
 }
+
 .sidebar input::placeholder {
   color: #e0e0e0;
 }
+
 .sidebar input.open {
   text-align: right;
 }
+
 .sidebar .bx-search {
   position: absolute;
   top: 50%;
@@ -279,6 +300,20 @@ a:hover, a:visited, a:focus {
   font-size: 22px;
   background-color: #2e2e2e;
   color: #fff;
+}
+
+.profile-img {
+  position: relative;
+  left: -6px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 5px;
+  border: 2px solid var(--light-text-color);
+  background: conic-gradient(#1abc9c 0% 25%, #bc1a4b 25% 50%, #f9d6c1 50% 75%, #7e7e7e 75% 100%);
+  box-sizing: content-box;
 }
 
 .home-section {
@@ -391,6 +426,57 @@ footer p {
 .mouseover-ltr-gtw:hover i {
   transition: all 0.5s ease;
   color: #fff;
+}
+
+/* Basic Flexbox Centering: Center items both horizontally and vertically */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Row direction with different justifications */
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Column direction with different justifications */
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-col-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {

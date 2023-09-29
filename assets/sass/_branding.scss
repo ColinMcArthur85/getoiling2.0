@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Base or primary color
 $color-default: #1abc9c;
 
@@ -48,3 +50,20 @@ $color-body: #e4e9f7;
 $color-light: #e0e0e0;
 // Different green shade as an accent color
 $accent-green: #16a085;
+
+// SHADOWS
+// Splitting the $shadow-color into its components
+$hue: 0deg;
+$saturation: 0%;
+$lightness: 63%;
+
+// Utilizing the components in the hsl function
+$hue: 0deg;
+$saturation: 0%;
+$lightness: 20%;
+
+$shadow-elevation-low: 0.3px 0.5px 0.7px hsl($hue, $saturation, math.div($lightness, 0.34)), 0.4px 0.8px 1px -1.2px hsl($hue, $saturation, math.div($lightness, 0.34)), 1px 2px 2.5px -2.5px hsl($hue, $saturation, math.div($lightness, 0.34));
+
+$shadow-elevation-medium: 0.3px 0.5px 0.7px hsl($hue, $saturation, math.div($lightness, 0.36)), 0.8px 1.6px 2px -0.8px hsl($hue, $saturation, math.div($lightness, 0.36)), 2.1px 4.1px 5.2px -1.7px hsl($hue, $saturation, math.div($lightness, 0.36)), 5px 10px 12.6px -2.5px hsl($hue, $saturation, math.div($lightness, 0.36));
+
+$shadow-elevation-high: 0.3px 0.5px 0.7px hsl($hue, $saturation, math.div($lightness, 0.38)), 1.7px 3.3px 4.2px -0.4px hsl($hue, $saturation, math.div($lightness, 0.38)), 3.2px 6.5px 8.2px -0.8px hsl($hue, $saturation, math.div($lightness, 0.38)), 5.7px 11.3px 14.2px -1.2px hsl($hue, $saturation, math.div($lightness, 0.38)), 9.6px 19.3px 24.3px -1.7px hsl($hue, $saturation, math.div($lightness, 0.38)), 15.9px 31.7px 39.9px -2.1px hsl($hue, $saturation, math.div($lightness, 0.38)), 25px 50px 62.9px -2.5px hsl($hue, $saturation, math.div($lightness, 0.38));

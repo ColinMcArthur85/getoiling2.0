@@ -41,115 +41,191 @@
                      <!-- What would you like to do today Body -->
                      <div class="card-content">
                         <!-- 3 columns structure -->
-                        <div class="card-column actions-list-left">
-                           <ul>
-                              <li>
-                                 <a class="mouseover-ltr" href="#" id="engage">
-                                    <i class="fas fa-handshake"></i>
-                                    <h3>Engage</h3>
-                                    <i class="fas fa-chevron-right"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#" id="create">
-                                    <i class="fas fa-pencil-alt"></i>
-                                    <h3>Create</h3>
-                                    <i class="fas fa-chevron-right"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#" id="automate">
-                                    <i class="fas fa-robot"></i>
-                                    <h3>Automate</h3>
-                                    <i class="fas fa-chevron-right"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#" id="design">
-                                    <i class="fas fa-palette"></i>
-                                    <h3>Design</h3>
-                                    <i class="fas fa-chevron-right"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#" id="learn">
-                                    <i class="fas fa-book"></i>
-                                    <h3>Learn</h3>
-                                    <i class="fas fa-chevron-right"></i>
-                                 </a>
-                              </li>
-                           </ul>
+                        <div class="card-column actions-list-left flex-col-between">
+                           <a class="mouseover-ltr flex-row-start" href="#" id="engage">
+                              <i class="fas fa-handshake"></i>
+                              <h3>Engage</h3>
+                              <i class="fas fa-chevron-right"></i>
+                           </a>
+                           <a class="mouseover-ltr flex-row-start" href="#" id="create">
+                              <i class="fas fa-pencil-alt"></i>
+                              <h3>Create</h3>
+                              <i class="fas fa-chevron-right"></i>
+                           </a>
+                           <a class="mouseover-ltr flex-row-start" href="#" id="automate">
+                              <i class="fas fa-robot"></i>
+                              <h3>Automate</h3>
+                              <i class="fas fa-chevron-right"></i>
+                           </a>
+                           <a class="mouseover-ltr flex-row-start" href="#" id="design">
+                              <i class="fas fa-palette"></i>
+                              <h3>Design</h3>
+                              <i class="fas fa-chevron-right"></i>
+                           </a>
+                           <a class="mouseover-ltr flex-row-start" href="#" id="learn">
+                              <i class="fas fa-book"></i>
+                              <h3>Learn</h3>
+                              <i class="fas fa-chevron-right"></i>
+                           </a>
                         </div>
                         <div class="card-column actions-list-center">
-                           <ul>
-                              <li style="display: block;">
-                                 <a class="mouseover-ltr actions-list-item" href="#">
-                                    <div class="actions-list-item-title">
-                                       <i class="fas fa-envelope"></i>
-                                       <h3>SEND EMAIL, TEXT, OR APP NOTIFICATION</h3>
-                                    </div>
-                                    <p>Stay in touch with your contacts by sending or scheduling a message.</p>
-                                 </a>
-                              </li>
-                              <li style="display:none;">
-                                 <a class="mouseover-ltr actions-list-item" href="#">
-                                    <div class="actions-list-item-title">
-                                       <i class="fas fa-envelope"></i>
-                                       <h3>CREATE CONTACT</h3>
-                                        </div>
-                                  <p>Create a contact.</p>
-                                 </a>
-                               </li>
-                              <li>
-                                 <a class="mouseover-ltr actions-list-item" href="#">
-                                    <div class="actions-list-item-title">
-                                       <i class="fas fa-comment-dots"></i>
-                                       <h3>MY CONTACTS</h3>
-                                    </div>
-                                    <p>Track, organize, find, set to-dos, and communicate with contacts.</p>
-                                 </a>
-                              </li>
-                           </ul>
+                           <div class="content-engage">
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>SEND EMAIL, TEXT, OR APP NOTIFICATION</h3>
+                                 </div>
+                                 <p>Stay in touch with your contacts by sending or scheduling a message.</p>
+                              </a>
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-comment-dots"></i>
+                                    <h3>MY CONTACTS</h3>
+                                 </div>
+                                 <p>Track, organize, find, set to-dos, and communicate with contacts.</p>
+                              </a>
+                           </div>
+                           <div class="content-create" style="display:none;">
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>CREATE CONTACT</h3>
+                                 </div>
+                                 <p>Add a contact to your contact manager.</p>
+                              </a>
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>CREATE WEB PAGE</h3>
+                                 </div>
+                                 <p>Track, organize, find, set to-dos, and communicate with contacts.</p>
+                              </a>
+                           </div>
+                           <div class="content-automate" style="display:none;">
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>CAMPAIGNS</h3>
+                                 </div>
+                                 <p>Set up emails & texts that send out over time to contacts.</p>
+                              </a>
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>AUTOMATIONS</h3>
+                                 </div>
+                                 <p>Run tasks like tagging or adding to vaults when certain actions happen.</p>
+                              </a>
+                           </div>
+                           <div class="content-design" style="display:none;">
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>MEMBER AREA</h3>
+                                 </div>
+                                 <p>Educate, take payments, and create a community on your site.</p>
+                              </a>
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>SITE SETTINGS</h3>
+                                 </div>
+                                 <p>Select a landing page, a website sharing image, and other settings.</p>
+                              </a>
+                           </div>
+                           <div class="content-learn" style="display:none;">
+                              <a class="mouseover-ltr actions-list-item" href="#">
+                                 <div class="actions-list-item-title">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>SUCCESS ACADEMY</h3>
+                                 </div>
+                                 <p>Visit the GetOiling Success Academy to get set up and grow your business more quickly.</p>
+                              </a>
+                           </div>
                         </div>
                         <div class="card-column actions-list-right">
-                           <ul>
-                              <li>
-                                 <a class="mouseover-ltr" href="#">
-                                 <span>Start or Schedule a Zoom Video Call</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#">
-                                 <span>Manage Member Area</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#">
-                                 <span>Manage Vaults</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#">
-                                 <span>Invite Contacts to a Vault</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#">
-                                 <span>Create Contact</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="mouseover-ltr" href="#">
-                                 <span>Import Contacts</span>
-                                 </a>
-                              </li>
-                              <li class="flex-align-center">
-                                 <i class="bx bx-search"></i>
-                                 <input type="text" placeholder="Search...">
-                                 <!-- <span class="tooltip">Search</span> -->
-                              </li>
-                           </ul>
-                           </ul>   
+                           <div class="content-engage">
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Start or Schedule a Zoom Video Call</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Manage Member Area</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Manage Vaults</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Invite Contacts to a Vault</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Create Contact</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Import Contacts</p>
+                              </a>
+                           </div>
+                           <div class="content-create" style="display: none;">
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Add Video</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Write Blog Post</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Create Event</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Create Landing Page</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Create Leg Builder Link</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Create Resource Bundle</p>
+                              </a>
+                           </div>
+                           <div class="content-automate" style="display: none;">
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Saved Replies</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Follow-Up Plans</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Email Signature & Default Campaign</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>View Bulk Messages</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>View Sent Message History</p>
+                              </a>
+                           
+                           </div>
+                           <div class="content-design" style="display: none;">
+                              <a class="mouseover-ltr" href="#">
+                                 <p>My Vaults</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Create Online Classes</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Built Custom Web Pages</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Edit Website Menu & Home Page</p>
+                              </a>
+                              <a class="mouseover-ltr" href="#">
+                                 <p>Website Fonts & Color</p>
+                              </a>
+                           </div>
+                           <div class="content-learn" style="display: none;">
+                              
+                           </div>
+                           <div class="search-bar">
+                              <i class="bx bx-search"></i>
+                              <input type="text" placeholder="Search...">
+                           </div>
                         </div>
                      </div>
                   </div>

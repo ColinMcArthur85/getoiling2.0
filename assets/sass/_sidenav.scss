@@ -7,13 +7,16 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-.sidebar.open .logo_details #btn {
+// ALL SIDEBAR MENU OPEN STATES
+.sidebar.open #btn {
   text-align: right;
 }
 
 .sidebar.open input {
   width: 100%;
   padding: 0 20px 0 50px;
+  opacity: 1;
+  z-index: -1;
 }
 
 .sidebar.open li a .link_name,
@@ -26,14 +29,17 @@
   width: 250px;
 }
 
-.sidebar li i {
-  height: 35px;
-  line-height: 35px;
-  font-size: 18px;
-  border-radius: 5px;
+.sidebar.open {
+  width: 250px;
 }
+// .sidebar li i {
+//   height: 35px;
+//   line-height: 35px;
+//   font-size: 18px;
+//   border-radius: 5px;
+// }
 
-/* .sidebar styles */
+// SIDE BAR MENU CLOSED STATES
 .sidebar {
   min-height: 100vh;
   width: 80px;
@@ -47,34 +53,34 @@
   border-right: 1px solid $accent-color-lighter1;
 }
 
-.sidebar.open {
-  width: 250px;
-}
-
-/* .logo_details styles nested inside .sidebar */
-.sidebar .logo_details {
+// THE GETOILING LOGO AND MENU BUTTON LAYOUT
+.logo_details {
   height: 60px;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-/* .icon and .logo_name styles nested inside .logo_details which is nested inside .sidebar */
-.sidebar .logo_details .icon,
-.sidebar .logo_details .logo_name {
+// THE GETOILING LOGO FADES AWAY WHEN MENU IS CLOSED
+.logo_details .icon,
+.logo_details .logo_name {
   opacity: 0;
   transition: all 0.5s ease;
 }
-
-/* .logo_name styles nested inside .logo_details which is nested inside .sidebar */
-.sidebar .logo_details .logo_name {
-  color: $accent-green;
-  font-size: 22px;
-  font-weight: 600;
+// THE GETOILING LOGO FADES IN WHEN MENU IS OPEN
+.sidebar.open .logo_name {
+  opacity: 1;
 }
 
-/* #btn styles nested inside .logo_details which is nested inside .sidebar */
-.sidebar .logo_details #btn {
+/* .logo_name styles nested inside .logo_details which is nested inside .sidebar */
+// .sidebar .logo_details .logo_name {
+//   color: $accent-green;
+//   font-size: 22px;
+//   font-weight: 600;
+// }
+
+// BUTTON TO OPEN AND CLOSE THE MENU
+#btn {
   position: absolute;
   top: 50%;
   right: 0;
@@ -86,37 +92,60 @@
 }
 
 /* .icon and .logo_name styles nested inside .logo_details which is nested inside .sidebar.open */
-.sidebar.open .logo_details .icon,
-.sidebar.open .logo_details .logo_name {
-  opacity: 1;
-}
 
-.sidebar i {
-  color: $color-white;
-  height: 60px;
-  line-height: 60px;
-  min-width: 50px;
-  font-size: 25px;
-  text-align: center;
-}
+// .sidebar i {
+//   color: $color-white;
+//   height: 60px;
+//   line-height: 60px;
+//   min-width: 50px;
+//   font-size: 25px;
+//   text-align: center;
+// }
 
 .sidebar .nav-list {
   margin-top: 20px;
-  height: 100%;
+  // height: 100%;
 }
 
-.sidebar li {
+.nav-list-item,
+.search-bar {
   position: relative;
   margin: 8px 0;
   list-style: none;
 }
 
-.sidebar li:hover .tooltip {
+.search-bar input {
+  width: 100%;
+  padding: 0 20px 0 50px;
+  font-size: 15px;
+  color: #2e2e2e;
+  font-weight: 400;
+  outline: none;
+  height: 35px;
+  // width: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7e7e7e;
+  transition: all 0.5s ease;
+}
+
+.nav-list-item:hover .tooltip,
+.search-bar:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.nav-list-item-icon {
+  color: $color-white;
+  min-width: 50px;
+  text-align: center;
+  height: 35px;
+  line-height: 35px !important;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 .sidebar li .tooltip {
@@ -193,12 +222,12 @@
   pointer-events: auto;
 }
 
-.sidebar li i {
-  height: 35px;
-  line-height: 35px;
-  font-size: 18px;
-  border-radius: 5px;
-}
+// .sidebar li i {
+//   height: 35px;
+//   line-height: 35px;
+//   font-size: 18px;
+//   border-radius: 5px;
+// }
 
 .sidebar li.profile {
   position: fixed;
@@ -250,6 +279,7 @@
   border-radius: 5px;
   background-color: $neutral-dark-gray;
   transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .sidebar input::placeholder {
@@ -260,7 +290,7 @@
   text-align: right;
 }
 
-.sidebar .bx-search {
+.bx-search {
   position: absolute;
   top: 50%;
   left: 0;
@@ -268,6 +298,15 @@
   font-size: 22px;
   background-color: $dark-text-color;
   color: $color-white;
+  line-height: 35px !important;
+  text-align: center;
+  font-size: 22px;
+  background-color: #2e2e2e;
+  color: #fff;
+  height: 35px;
+  width: 50px;
+  border-radius: 5px;
+  z-index: 100;
 }
 
 .profile-img {
@@ -523,30 +562,6 @@
 //     color: $color-white;
 //   }
 // }
-
-.home-section {
-  position: relative;
-  background-color: $dark-text-color;
-  min-height: 100vh;
-  top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
-  z-index: 2;
-
-  .text {
-    display: inline-block;
-    color: $color-default;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 18px;
-  }
-
-  .sidebar.open ~ & {
-    left: 250px;
-    width: calc(100% - 250px);
-  }
-}
 
 .profile-img {
   position: relative;

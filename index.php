@@ -18,6 +18,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700&display=swap" rel="stylesheet">
       <!-- FontAwesome Icons -->
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+      
    </head>
    <body>
       <header>
@@ -34,8 +36,10 @@
                   <!-- What would you like to do today card -->
                   <div class="card card-large">
                      <!-- What would you like to do today Header -->
-                     <div class="card-header">
+                     <div class="card-header flex-row-start">
+                        <a href="#">
                         <i class="fas fa-chevron-down"></i>
+                        </a>
                         <h2>What would you like to do today?</h2>
                      </div>
                      <!-- What would you like to do today Body -->
@@ -200,7 +204,6 @@
                               <a class="mouseover-ltr" href="#">
                                  <p>View Sent Message History</p>
                               </a>
-                           
                            </div>
                            <div class="content-design" style="display: none;">
                               <a class="mouseover-ltr" href="#">
@@ -220,7 +223,6 @@
                               </a>
                            </div>
                            <div class="content-learn" style="display: none;">
-                              
                            </div>
                            <div class="search-bar">
                               <i class="bx bx-search"></i>
@@ -231,33 +233,82 @@
                   </div>
                   <div class="card">
                      <!-- System Activity Card -->
-                     <h3>System Activity - 5 Days </h3>
-                     <p>Details...</p>
+                     <div class="card-header flex-row-between">
+                        <h2>System Activity - 5 Days </h2>
+                        <div>
+                           <a href="">
+                           <i class="fas fa-tachometer-alt"></i>
+                           </a>
+                           <a href="#">
+                           <i class="fas fa-file-alt"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="flex-row-around">
+                     <div class="chart-wrapper">
+                           <canvas id="systemActivityChart" style="width:100%;"></canvas>
+                        </div>
+                        <!-- <div class="piechart"></div>
+                        <div class="piechart-items">
+                           <p class="with-circle-light">Elena Martinez</p>
+                           <p class="with-circle-complementary">Liam Donovan</p>
+                           <p class="with-circle-dark-accent">Aria Patel</p>
+                        </div> -->
+                     </div>
                   </div>
                   <div class="card">
                      <!-- Top 20 Contacts Card -->
-                     <h3>Top 20 Contacts - 3 Days </h3>
-                     <p>Details...</p>
+                     <div class="card-header flex-row-between">
+                        <h2>Top 20 Contacts - 3 Days </h2>
+                        <div>
+                           <a href="#">
+                           <i class="fas fa-chart-pie"></i>
+                           </a>
+                           <a href="#">
+                           <i class="fas fa-list"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="flex-row-around">
+                        <div class="chart-wrapper">
+                           <canvas id="top20Chart" style="width:100%;"></canvas>
+                        </div>
+                     </div>
                   </div>
                   <div class="card">
                      <!-- Recently Active Card-->
-                     <h3>Recently Active Contacts </h3>
+                     <div class="card-header flex-row-between">
+                        <h2>Recently Active Contacts </h2>
+                        <button>View All</button>
+                     </div>
                      <p>Details...</p>
                   </div>
+
+               
                   <div class="card">
                      <!-- To Do Card -->
-                     <h3>To Do For</h3>
+                     <div class="card-header flex-row-between">
+                        <h2>To Do For</h2>
+                        <button>Add</button>
+                     </div>
                      <p>Details...</p>
                   </div>
+
                   <div class="card">
                      <!-- Contacts to reach out to card-->
-                     <h3> Contacts You May Wish To Reach Out To </h3>
-                     <p>Details...</p>
+                     <div class="card-header">
+                        <h2> Contacts You May Wish To Reach Out To </h2>
+                        
+                     </div>
+                     <p>None. Give your contacts a rating of 1-5 to get them to show here.</p>
                   </div>
                   <div class="card">
                      <!-- Events with To Do Card -->
-                     <h3>Events With To Dos For</h3>
-                     <p>Details...</p>
+                     <div class="card-header flex-row-between">
+                        <h2>Events With To Dos For</h2>
+                        <input type="date" name="" id="" value="2023-10-03">
+                     </div>
+                     <p>Nothing. What are you going to do with your life?</p>
                   </div>
                </div>
             </div>

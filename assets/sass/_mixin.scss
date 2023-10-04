@@ -1,7 +1,4 @@
-@mixin mouseover-ltr-effect(
-  $color-bg: $color-white,
-  $color-text: $color-default
-) {
+@mixin mouseover-ltr-effect($color-bg: $color-white, $color-text: $color-default) {
   position: relative;
   overflow: hidden;
 
@@ -31,5 +28,19 @@
       transition: all 0.5s ease;
       color: $color-text;
     }
+  }
+}
+
+// TINY CICRLE FOR TOP 20 CONTACT CARDS
+@mixin circle-before($color) {
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: $color;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
   }
 }

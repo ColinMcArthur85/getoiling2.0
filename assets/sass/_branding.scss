@@ -1,69 +1,101 @@
 @use "sass:math";
 
-// Base or primary color
+// PRIMARY COLORS
 $color-default: #1abc9c;
 
-// ACCENT COLORS AND THEIR VARIATIONS
-
-// Lighter shade of the base color
+// ACCENT COLORS AND VARIATIONS
 $accent-color-lighter1: #4ecfbf;
-// Slightly lighter shade, for hover effects
 $accent-color-hover: #1ed6b2;
-// Slightly darker shade of the base color
 $accent-color-darker1: #179b89;
-// Darker shade of the base color
 $dark-accent-color: #15967c;
+$accent-green: #16a085;
 
 // GREYSCALE SHADES
-
-// Dark text color, for readability on light backgrounds
 $dark-text-color: #2e2e2e;
-// Light text color, for readability on dark backgrounds
 $light-text-color: #f1f1f1;
-// Light gray, neutral tone
 $neutral-light-gray: #e9e9e9;
-// Dark gray, neutral tone
 $neutral-dark-gray: #7e7e7e;
 
-// COMPLEMENTARY AND CONTRASTING COLORS
+$gray-100: #f7f7f7; // Lightest shade
+$gray-200: #ebebeb;
+$gray-300: #d1d1d1;
+$gray-400: #b7b7b7;
+$gray-500: #9e9e9e; // Middle shade
+$gray-600: #848484;
+$gray-700: #6a6a6a;
+$gray-800: #505050;
+$gray-900: #363636; // Darkest shade
 
-// Contrasting with the primary color
+// COMPLEMENTARY AND CONTRASTING COLORS
 $complementary-color: #bc1a4b;
-// Another contrasting color
 $color-second: #0067ac;
-// Light contrasting color, suitable for backgrounds
 $header-background: #fbebda;
-// Another light contrasting color, for backgrounds or highlights
 $callout-color: #fffae8;
-// Light peach contrasting accent color
 $accent-peach: #f9d6c1;
-// Cream contrasting accent color
 $accent-cream: #fff5d0;
 
 // OTHER COLORS
-
-// Pure white
 $color-white: #fff;
-// Background color
 $color-body: #e4e9f7;
-// Another light color
 $color-light: #e0e0e0;
-// Different green shade as an accent color
-$accent-green: #16a085;
 
-// SHADOWS
-// Splitting the $shadow-color into its components
+// SHADOWS COMPONENTS
 $hue: 0deg;
 $saturation: 0%;
-$lightness: 63%;
-
-// Utilizing the components in the hsl function
-$hue: 0deg;
-$saturation: 0%;
-$lightness: 20%;
-
+$lightness: 50%;
 $shadow-elevation-low: 0.3px 0.5px 0.7px hsl($hue, $saturation, math.div($lightness, 0.34)), 0.4px 0.8px 1px -1.2px hsl($hue, $saturation, math.div($lightness, 0.34)), 1px 2px 2.5px -2.5px hsl($hue, $saturation, math.div($lightness, 0.34));
-
 $shadow-elevation-medium: 0.3px 0.5px 0.7px hsl($hue, $saturation, math.div($lightness, 0.36)), 0.8px 1.6px 2px -0.8px hsl($hue, $saturation, math.div($lightness, 0.36)), 2.1px 4.1px 5.2px -1.7px hsl($hue, $saturation, math.div($lightness, 0.36)), 5px 10px 12.6px -2.5px hsl($hue, $saturation, math.div($lightness, 0.36));
-
 $shadow-elevation-high: 0.3px 0.5px 0.7px hsl($hue, $saturation, math.div($lightness, 0.38)), 1.7px 3.3px 4.2px -0.4px hsl($hue, $saturation, math.div($lightness, 0.38)), 3.2px 6.5px 8.2px -0.8px hsl($hue, $saturation, math.div($lightness, 0.38)), 5.7px 11.3px 14.2px -1.2px hsl($hue, $saturation, math.div($lightness, 0.38)), 9.6px 19.3px 24.3px -1.7px hsl($hue, $saturation, math.div($lightness, 0.38)), 15.9px 31.7px 39.9px -2.1px hsl($hue, $saturation, math.div($lightness, 0.38)), 25px 50px 62.9px -2.5px hsl($hue, $saturation, math.div($lightness, 0.38));
+
+// TYPOGRAPHY WEIGHTS
+$fw-100: 100;
+$fw-200: 200;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+$fw-900: 900;
+
+// FONT SIZES
+$size-1: 0.25rem;
+$size-2: 0.5rem;
+$size-3: 0.75rem;
+$size-4: 1rem;
+$size-5: 1.25rem;
+$size-6: 1.5rem;
+$size-7: 1.75rem;
+$size-8: 2rem;
+$size-9: 2.25rem;
+$size-10: 2.5rem;
+$size-11: 2.75rem;
+$size-12: 3rem;
+$size-13: 3.25rem;
+$size-14: 3.5rem;
+$size-15: 3.75rem;
+$size-16: 4rem;
+$size-17: 4.25rem;
+$size-18: 4.5rem;
+$size-19: 4.75rem;
+$size-20: 5rem;
+$size-21: 5.25rem;
+$size-22: 5.5rem;
+$size-23: 5.75rem;
+$size-24: 6rem;
+$size-25: 6.25rem;
+$size-26: 6.5rem;
+$size-27: 6.75rem;
+$size-28: 7rem;
+$size-29: 7.25rem;
+$size-30: 7.5rem;
+$size-31: 7.75rem;
+$size-32: 8rem;
+$size-33: 8.25rem;
+$size-34: 8.5rem;
+$size-35: 8.75rem;
+$size-36: 9rem;
+$size-37: 9.25rem;
+$size-38: 9.5rem;
+$size-39: 9.75rem;
+$size-40: 10rem;

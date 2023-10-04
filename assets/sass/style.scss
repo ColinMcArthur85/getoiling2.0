@@ -20,23 +20,47 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: $size-5;
   line-height: 1.5;
 }
 
 .container-fluid {
-  background-color: $color-white;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   width: 100%;
 }
 
 .panel-default {
   border-color: $accent-color-lighter1;
+  // background: linear-gradient(to bottom, $accent-color-darker1, $accent-color-lighter1);
   background: linear-gradient(to bottom, $accent-color-darker1, $accent-color-lighter1);
 }
 
+.home-section {
+  position: relative;
+  // background: linear-gradient(to bottom, $gray-100, $gray-300);
+  background: $color-white;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+
+  .text {
+    display: inline-block;
+    color: $color-default;
+    font-size: $size-6;
+    font-weight: 500;
+    margin: 18px;
+  }
+
+  .sidebar.open ~ & {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+}
 // CARDS
 
 .card-grid {
@@ -49,18 +73,51 @@ p {
 }
 
 .card {
-  background: $color-default;
-  color: $color-white;
-  border-radius: 5px;
-  box-shadow: $shadow-elevation-medium;
+  // background: $gray-100;
+  background: linear-gradient($gray-300 0%, $color-white 12.5%);
+  color: $gray-700;
+  border-radius: 8px;
+  border: 1px solid $gray-300;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  // box-shadow: $shadow-elevation-medium;
+  // padding: 1em;
 
   &-large {
     grid-column: span 2;
   }
 
   &-header {
-    border-bottom: 1px solid $dark-text-color;
-    padding: 1em;
+    color: $gray-700;
+    border-bottom: 1px solid $gray-200;
+    // background-color: $neutral-dark-gray;
+    padding: $size-2 $size-4;
+    border-radius: 8px 8px 0px 0px;
+    h2 {
+      font-weight: 700;
+      font-size: $size-5;
+    }
+    i {
+      padding: $size-4 $size-4;
+      font-size: $size-5;
+      &:hover {
+        cursor: pointer;
+        background-color: $color-white;
+        outline: 2px solid $color-second;
+        border-radius: 5px;
+        transition: all 0.1s ease-in-out;
+      }
+      &:active {
+        transform: translateY(2px);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+        border-radius: 5px;
+      }
+
+      &.active {
+        outline: 2px solid $color-second;
+        border-radius: 5px;
+        background-color: $color-white;
+      }
+    }
   }
 
   &-content {
@@ -137,26 +194,25 @@ p {
   align-items: center;
 }
 
-.home-section {
-  position: relative;
-  background: linear-gradient(to bottom, $color-light, $color-white);
-  min-height: 100vh;
-  top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
-  z-index: 2;
+// STYLES FOR THE TOP 20 CONTACTS CARD
+.piechart {
+  margin-block: $size-8;
+  // display: block;
+  // position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: conic-gradient($color-light 70deg, $complementary-color 0 235deg, $dark-accent-color 0);
+}
 
-  .text {
-    display: inline-block;
-    color: $color-default;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 18px;
-  }
+.with-circle-light {
+  @include circle-before($color-light);
+}
 
-  .sidebar.open ~ & {
-    left: 250px;
-    width: calc(100% - 250px);
-  }
+.with-circle-complementary {
+  @include circle-before($complementary-color);
+}
+
+.with-circle-dark-accent {
+  @include circle-before($dark-accent-color);
 }

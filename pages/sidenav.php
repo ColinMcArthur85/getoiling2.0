@@ -91,13 +91,13 @@
          <span class="link_name">Contacts</span>
          </a>
          <span class="tooltip">
-            <ul>
+            <ul class="">
                <li>My Contacts</li>
                <li>Campaigns</li>
                <li>Messages</li>
                <li>Settings</li>
             </ul>
-            Contacts
+   
          </span>
       </li>
       <li class="nav-list-item">

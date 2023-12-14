@@ -40,7 +40,8 @@ window.onload = function () {
     });
     // Display selected content option
     document.querySelectorAll(".content-" + option).forEach((div) => {
-      div.style.display = "block";
+      div.style.display = "flex";
+      div.style.flexDirection = "column";
     });
   }
 
@@ -141,4 +142,66 @@ function toggleCardIconActivation(clickedIcon) {
     activeIcon.classList.remove("active");
   });
   clickedIcon.classList.add("active");
+}
+
+// COLLAPSE THE LARGE CARD
+
+document.getElementById("toggle-chevron").addEventListener("click", function (event) {
+  event.preventDefault(); // prevent default link action
+
+  let cardContent = document.querySelector(".card-content");
+  let chevronIcon = document.querySelector(".chevron-icon");
+  let cardLarge = document.querySelector(".card-large");
+  // let card = document.querySelector(".card");
+
+  // Check if card content is currently visible
+  if (getComputedStyle(cardContent).display !== "none") {
+    cardContent.style.display = "none"; // hide it
+    chevronIcon.classList.remove("fa-chevron-down");
+    chevronIcon.classList.add("fa-chevron-up");
+    cardLarge.style.height = "72px";
+  } else {
+    cardContent.style.display = "";
+    chevronIcon.classList.remove("fa-chevron-up");
+    chevronIcon.classList.add("fa-chevron-down");
+    cardLarge.style.height = "";
+  }
+});
+
+var overlay = document.getElementById("overlay");
+
+// Declare the modal, button, and close span
+var modal = document.getElementById("toDoModal");
+var btn = document.getElementById("toDoModalbtn");
+var span = document.getElementsByClassName("close")[0];
+var overlay = document.getElementById("overlay");
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+  overlay.style.display = "block"; // Show the overlay
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+  overlay.style.display = "none"; // Hide the overlay
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal || event.target == overlay) {
+    modal.style.display = "none";
+    overlay.style.display = "none"; // Hide the overlay when clicking on it too
+  }
+};
+
+// Existing TO DO MODAL function
+function toggleNote() {
+  const noteArea = document.getElementById("noteArea");
+  if (noteArea.style.display === "none") {
+    noteArea.style.display = "block";
+  } else {
+    noteArea.style.display = "none";
+  }
 }
